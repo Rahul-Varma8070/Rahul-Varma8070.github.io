@@ -18,7 +18,7 @@
         return {newCommand: true };
       },
     resume : function($modal, $terminal){
-       window.open("https://rahul-varma8070.github.io/Resume-24-May-2019.pdf", "_self");
+       window.open("https://rahul-varma8070.github.io/Resume-24-May-2019.pdf", "_black");
        println($terminal, "\n\downloading...\n");
        return {newCommand: true };      
       
