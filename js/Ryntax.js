@@ -18,7 +18,7 @@
         return {newCommand: true };
       },
     resume : function($modal, $terminal){
-       window.open("https://drive.google.com/open?id=0B_ODOvoMlssvOHU0MFNyOGFpNTZxekM0WWNaNzlzdk1zWHpz", "_self");
+       window.open("https://rahul-varma8070.github.io/Resume-24-May-2019.pdf", "_self");
        println($terminal, "\n\downloading...\n");
        return {newCommand: true };      
       
