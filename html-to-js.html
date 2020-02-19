@@ -74,27 +74,37 @@
             return e;
         },
         _sh = function (d) {
-            d = d.children;
+            d = d.childNodes;
             
             var out = '';
             for (let i = 0; i < d.length; i++) {
                 const e = d[i];
-                var n = e.localName;
-                var a = e.attributes;
-                var attributes = {}; 
-                for (var att, ai = 0, atts = a, _n = atts.length; ai < _n; ai++){
-                    let attr = atts[ai];
-                    attributes[ attr.name ] = attr.value;
-                }
-                    out += `_ne("${n}", ${JSON.stringify(attributes)}, ${(function(){
-                        if(e.children.length > 0){
-                            var o = `[${_sh(e)}],`;
-                        }else{
-                            var o = `\`${e.textContent}\`` 
+                if(e.nodeType == 1 || e.nodeType == 3){
+                    if(e.nodeType == 3){
+                        if(e.nodeValue&&!(/^[\s\t\n\r]*$/g.test(e.nodeValue))){
+                            out += `document.createTextNode(\`${e.nodeValue}\`),\n`;
                         }
-                        
-                        return o;
-                    })()}),\n`;
+                        continue;
+                    }
+                    
+                    var n = e.localName;
+                    var a = e.attributes;
+                    var attributes = {}; 
+                    
+                    for (var att, ai = 0, atts = a, _n = atts.length; ai < _n; ai++){
+                        let attr = atts[ai];
+                        attributes[ attr.name ] = attr.value;
+                    }
+                        out += `_ne("${n}", ${JSON.stringify(attributes)}, ${(function(){
+                            if(e.childNodes.length > 0){
+                                var o = `[${_sh(e)}],`;
+                            }else{
+                                var o = `\`${e.textContent}\`` 
+                            }
+                            
+                            return o;
+                        })()}),\n`;
+                    }
             }
 
             return out;
@@ -140,6 +150,7 @@ function _ne(t,a,txt) {
             e.appendChild(f);
         }.bind(this));
     }
+
     return e;
 }\n/**Helpers End**/\n\n`;
             }
