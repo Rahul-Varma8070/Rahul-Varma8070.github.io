@@ -43,6 +43,7 @@
       -ms-user-select: all;
           user-select: all;
   font-size: 13px;
+  word-break: break-all;
 }
 
 .code2 {
