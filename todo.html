@@ -464,7 +464,7 @@
             if(inStatus == 'all'){
                 if(searchContext.includes(query)){
                     let text = titleElement.textContent;
-                    titleElement.innerHTML = text.replace(input.value, input.value.fontcolor('red'));
+                    titleElement.innerHTML = text.replace(input.value, 'replaced');
                     post.classList.remove('hide');
                 }else{
                     post.classList.add('hide');
@@ -473,7 +473,7 @@
             }else{
                 if(searchContext.includes(query) && inStatus == status){
                     let text = titleElement.textContent;
-                    titleElement.innerHTML = text.replace(input.value, input.value.fontcolor('red'));
+                    titleElement.innerHTML = text.replace(input.value, 'replaced');
                     post.classList.remove('hide');
                 }else{
                     post.classList.add('hide');
