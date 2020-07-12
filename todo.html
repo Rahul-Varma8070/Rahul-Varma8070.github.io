@@ -457,10 +457,11 @@
 
         posts.forEach(function(post){
             let searchContext = post.getAttribute(attr).toLowerCase();
+            let titleElement = post.getElementsByClassName('title')[0];
             let status = post.getAttribute('status');
             if(inStatus == 'all'){
                 if(searchContext.includes(query)){
-                    markQuery(post, input);
+                    markQuery(titleElement, input);
                     post.classList.remove('hide');
                 }else{
                     post.classList.add('hide');
@@ -468,7 +469,7 @@
                 }
             }else{
                 if(searchContext.includes(query) && inStatus == status){
-                    markQuery(post, input);
+                    markQuery(titleElement, input);
                     post.classList.remove('hide');
                 }else{
                     post.classList.add('hide');
@@ -530,11 +531,10 @@
     }
     
     
-    function markQuery (post, input){
-        let titleElement = post.getElementsByClassName('title')[0];
-        let text = titleElement.textContent;
+    function markQuery (elem, input){
+        let text = elem.textContent;
         let search = RegExp(input.value , 'i');
-        titleElement.innerHTML = text.replace(search, `<span>$&</span>`);
+        elem.innerHTML = text.replace(search, `<span>$&</span>`);
     
     }
 
