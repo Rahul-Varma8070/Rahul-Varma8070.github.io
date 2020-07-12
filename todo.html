@@ -162,7 +162,7 @@
             color: #a9a9a9;
         }
 
-        .post-item .title font {
+        .post-item .title span {
             background-color: rgba(158, 158, 158, 0.15);
             color: #009688;
         }
@@ -456,15 +456,11 @@
         
 
         posts.forEach(function(post){
-            
             let searchContext = post.getAttribute(attr).toLowerCase();
             let status = post.getAttribute('status');
-            let titleElement = post.getElementsByClassName('title')[0];
-            
             if(inStatus == 'all'){
                 if(searchContext.includes(query)){
-                    let text = titleElement.textContent;
-                    titleElement.innerHTML = text.replace(input.value, input.value.fontcolor('red'));
+                    markQuery(post, input);
                     post.classList.remove('hide');
                 }else{
                     post.classList.add('hide');
@@ -472,8 +468,7 @@
                 }
             }else{
                 if(searchContext.includes(query) && inStatus == status){
-                    let text = titleElement.textContent;
-                    titleElement.innerHTML = text.replace(input.value, input.value.fontcolor('red'));
+                    markQuery(post, input);
                     post.classList.remove('hide');
                 }else{
                     post.classList.add('hide');
@@ -532,6 +527,15 @@
             return;
 
             
+    }
+    
+    
+    function markQuery (post, input){
+        let titleElement = post.getElementsByClassName('title')[0];
+        let text = titleElement.textContent;
+        let search = RegExp(input.value , 'i');
+        titleElement.innerHTML = text.replace(search, `<span>$&</span>`);
+    
     }
 
 </script>
