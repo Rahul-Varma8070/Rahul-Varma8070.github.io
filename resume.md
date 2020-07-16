@@ -25,3 +25,41 @@ organization objective.
 
 
     
+---
+## Education Details
+> #### `Bachelor Of Science Information Technology`
+> **Dyan Ganga EducationTrust**<br>
+> Year of completion: `2019`<br>
+> *`CGPA: 7.2`*
+
+---
+## Technical Skills
+```
+Familiar OS's: Window, linux.
+Programming Skills : Java, HTML, CSS, Bootstrap, Tailwind, JavaScript, SVG, MySql, Python, PHP, AJAX, laravel,
+Codigniter, JQuery, VeuJs, Node.Js, Aws, Git.
+```
+
+---
+
+## Projects
+> #### `RcCms`
+> *Team Size*: 1<br>
+> *Duration*: Aug, 2018 - Jan, 2019 <br>
+> *Roles*: Project planning, integration, testing<br>
+> *Technologies*: HTML, CSS, Core PHP, Javascript, Mysql, JSON.
+> *Description*:
+```
+- The creation of RcCms is inspired by wordpress and this is my college project.
+- RcCms is a open source web based content management system build with Javascript, HTML, CSS, as frontend technologies
+  and PHP, MySql as backend technologies, JSON.
+- It have various plugins and templates supports with customizable UI.
+- The management of plugins throughout cms are managed in such a way that, the all plugins are stored in a different server
+  and pull clone of plugin on client server, which is one of the challenging in the entire project.
+
+```
+
+  
+ 
+
+
