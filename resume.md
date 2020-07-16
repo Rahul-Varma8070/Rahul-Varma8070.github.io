@@ -17,7 +17,7 @@ organization objective.
 
 ---
 ## Work Experience
-> ***`Fullstack Developer`***<br>
+> #### `Fullstack Developer`
 > **Acetrot**<br>
 > *`May, 2019 - Present`* <br>
 > Responsible for creating backend logics, building attractive user interfaces for mobile and web apps, automating repeated processes.
