@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+<!-- Data derived from:
+       Ed Knittel - || tastypopsicle.com
+       Feel free to use this file for your own purposes.
+       Just leave the comments and credits when doing so.
+-->
+  <Document>
+    <name>Chicago Transit Map</name>
+    <description>Chicago Transit Authority train lines</description>
+
+    <Style id="blueLine">
+      <LineStyle>
+        <color>ffff0000</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+    <Style id="redLine">
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+    <Style id="greenLine">
+      <LineStyle>
+        <color>ff009900</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+    <Style id="orangeLine">
+      <LineStyle>
+        <color>ff00ccff</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+    <Style id="pinkLine">
+      <LineStyle>
+        <color>ffff33ff</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+    <Style id="brownLine">
+      <LineStyle>
+        <color>ff66a1cc</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+    <Style id="purpleLine">
+      <LineStyle>
+        <color>ffcc00cc</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+    <Style id="yellowLine">
+      <LineStyle>
+        <color>ff61f2f2</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+
+    <Placemark>
+      <name>Blue Line</name>
+      <styleUrl>#blueLine</styleUrl>
+      <LineString>
+        <altitudeMode>relative</altitudeMode>
+        <coordinates>
+19.0849507,73.0133566
+19.0860443,73.0147171
+19.0869708,73.0156034
+19.0840546,73.0119754
+19.0783496,73.0134562
+19.0783562,73.0143688
+19.0733168,73.0151785
+19.0728798,73.0153591
+19.0731358,73.0177252
+19.0733028,73.0176747
+19.0742986,73.0181839
+19.0766756,73.0185592
+19.0792913,73.0177449
+19.0890401,73.0126736
+19.0901991,73.0181943
+19.0903688,73.0180551
+19.0903599,73.0167489
+19.0942153,73.0155316
+19.0948414,73.0157055
+19.1012755,73.0127467
+19.1251057,73.0049949
+19.1238047,73.0055269
+19.151098,73.0013405,
+19.1532661,73.0007999
+19.1556787,73.0002014
+19.1559231,73.0001435
+19.1634734,72.9998877
+19.1630251,72.9997637
+19.1638253,72.9995558
+19.1691951,72.999031,
+19.1701866,72.9989964
+19.1706475,72.9990071
+19.1719252,72.9986941
+19.1734368,72.9983355
+19.1807464,72.9959082
+19.1815482,72.9952897
+19.1826119,72.9944323
+        </coordinates>
+      </LineString>
+    </Placemark>
+  </Document>
+</kml>
